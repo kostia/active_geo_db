@@ -3,8 +3,8 @@ require File.expand_path("../lib/active_geo_db/version", __FILE__)
 
 Gem::Specification.new do |gem|
   gem.add_dependency("activerecord")
+  gem.add_dependency("open_geo_db")
   gem.add_dependency("rails")
-  gem.add_development_dependency("open_geo_db")
   gem.authors = ["Kostiantyn Kahanskyi"]
   gem.description = %q{Rails (ActiveRecord) lib for accessing OpenGeoDb}
   gem.email = %w(kostiantyn.kahanskyi@googlemail.com)

@@ -9,8 +9,8 @@ module ActiveGeoDb
   # * Establish connection to OpenGeoDb database
   def self.initialize(application)
     connection_configuration_path = application.paths["config/database"].first
-    connection_configuration = ConnectionConfiguration.load_file(connection_configuration_path)
-    ConnectionProvider.establish_connection(connection_configuration.to_hash)
+    ConnectionConfiguration.instance.load_file(connection_configuration_path)
+    ConnectionProvider.establish_connection(ConnectionConfiguration.instance.to_hash)
   end
 
   # Find coordinates for a specific location
